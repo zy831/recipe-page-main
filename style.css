@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Outfit', serif;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Young Serif', serif;
+}
+
+h1 {
+    line-height: 1;
+    font-weight: 500;
+}
+
+h2 {
+    color: var(--brown-800);
+}
+
+h3 {
+    font-family: 'Outfit', serif;
+    color: var(--rose-800);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+li {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+li::marker {
+    color: var(--brown-800);
+    font-weight: bold;
+}
+
+header,
+section {
+    margin: 0 2rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+    border-bottom: 0;
+}
+
+td {
+    padding: 1rem 2rem;
+}
+
+header>div {
+    background-color: var(--rose-50);
+    padding: 1.5rem;
+    border-radius: .8rem;
+}
+
+strong {
+    color: var(--stone-900);
+}
+
+/* utility class */
+.bb {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.pb {
+    padding-bottom: 1.8rem;
+}
+
+.brown-bold {
+    font-weight: bold;
+    color: var(--brown-800);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-2 {
+    gap: .8rem;
+}
+
+.gap-3 {
+    gap: 2rem;
+}
+
+@media screen and (min-width:700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--stone-100);
+    }
+
+    main {
+        max-width: 700px;
+        margin: 6rem 0;
+        background-color: var(--white);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    header,
+    section {
+        margin: 0;
+    }
+
+    img {
+        border-radius: 1rem;
+    }
+}
